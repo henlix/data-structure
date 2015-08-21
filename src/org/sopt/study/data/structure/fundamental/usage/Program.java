@@ -3,6 +3,7 @@ package org.sopt.study.data.structure.fundamental.usage;
 import org.sopt.study.data.structure.fundamental.base.Collection;
 import org.sopt.study.data.structure.fundamental.base.Node;
 
+import org.sopt.study.data.structure.fundamental.impl.CircularQueue;
 import org.sopt.study.data.structure.fundamental.impl.LinkedList;
 import org.sopt.study.data.structure.fundamental.impl.Queue;
 import org.sopt.study.data.structure.fundamental.impl.Stack;
@@ -10,6 +11,8 @@ import org.sopt.study.data.structure.fundamental.impl.Stack;
 public class Program {
 
     public static void main(String[] args) {
+
+        /*
 
         LinkedList<Item> list = new LinkedList<Item>();
 
@@ -61,8 +64,47 @@ public class Program {
         printAll(queue);
         System.out.println("=============================================");
         System.out.println("Dequeue : " + dequeue.t);
+
+        */
+
+        CircularQueue<Item> cQueue = new CircularQueue<Item>(Item.class, 5);
+
+        cQueue.enqueue(new Item("Hello"));
+        cQueue.enqueue(new Item("Circular"));
+        cQueue.enqueue(new Item("Queue"));
+
+        printAll(cQueue);
+
+        cQueue.enqueue(new Item("Size"));
+        cQueue.enqueue(new Item("Overflow ?"));
+        cQueue.enqueue(new Item("NO WAY"));
+
+        printAll(cQueue);
+
+        Item dequeue = cQueue.dequeue();
+
+        System.out.println("=============================================");
+        System.out.println("Dequeue : " + dequeue);
+
+        while (!cQueue.isEmpty()) {
+
+            Item item = cQueue.dequeue();
+            System.out.println("Size : " + cQueue.size() + " >> " + item);
+        }
+
+        printAll(cQueue);
     }
 
+    private static void printAll(CircularQueue<Item> items) {
+
+        System.out.println("=============================================");
+
+        for (int i = 0; i < items.size(); i++) {
+
+            Item item = items.get(i);
+            System.out.println(item);
+        }
+    }
 
     private static void printAll(Collection<Item> items) {
 
