@@ -67,7 +67,7 @@ public class Program {
 
         */
 
-        // ¿±πÃ »Æ¿Œ.
+        // Ïú§ÎØ∏ ÌôïÏù∏ - UTF8Î°ú ÏÑ§Ï†ï.
         CircularQueue<Item> cQueue = new CircularQueue<Item>(Item.class, 5);
 
         cQueue.enqueue(new Item("Hello"));
