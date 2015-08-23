@@ -67,6 +67,7 @@ public class Program {
 
         */
 
+        // ¿±πÃ »Æ¿Œ.
         CircularQueue<Item> cQueue = new CircularQueue<Item>(Item.class, 5);
 
         cQueue.enqueue(new Item("Hello"));
