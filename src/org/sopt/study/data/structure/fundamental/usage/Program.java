@@ -76,9 +76,15 @@ public class Program {
 
         printAll(cQueue);
 
+        cQueue.dequeue();
+        cQueue.dequeue();
+
         cQueue.enqueue(new Item("Size"));
         cQueue.enqueue(new Item("Overflow ?"));
         cQueue.enqueue(new Item("NO WAY"));
+
+        cQueue.enqueue(new Item("REALLY?"));
+        cQueue.enqueue(new Item("TRY THEN"));
 
         printAll(cQueue);
 

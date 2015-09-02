@@ -1,9 +1,8 @@
 package org.sopt.study.data.structure.fundamental.impl;
 
-import org.sopt.study.data.structure.fundamental.base.Node;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
+
 
 public class CircularQueue<T> {
 
@@ -45,7 +44,7 @@ public class CircularQueue<T> {
             }
             else {
 
-                System.arraycopy(array, start, newArray, capacity, capacity);
+                System.arraycopy(array, start, newArray, 0, capacity - start);
                 System.arraycopy(array, 0, newArray, capacity - start, rear + 1);
             }
 
