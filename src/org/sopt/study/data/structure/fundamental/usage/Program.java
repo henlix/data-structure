@@ -76,6 +76,7 @@ public class Program {
 
         printAll(cQueue);
 
+        //dequeue
         cQueue.dequeue();
         cQueue.dequeue();
 
@@ -83,6 +84,7 @@ public class Program {
         cQueue.enqueue(new Item("Overflow ?"));
         cQueue.enqueue(new Item("NO WAY"));
 
+        //enqueue
         cQueue.enqueue(new Item("REALLY?"));
         cQueue.enqueue(new Item("TRY THEN"));
 

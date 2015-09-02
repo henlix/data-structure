@@ -44,7 +44,7 @@ public class CircularQueue<T> {
             }
             else {
 
-                System.arraycopy(array, start, newArray, 0, capacity - start);
+                System.arraycopy(array, start, newArray, 0 , capacity - start);
                 System.arraycopy(array, 0, newArray, capacity - start, rear + 1);
             }
 
